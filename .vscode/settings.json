@@ -1,0 +1,22 @@
+{
+    // Column guideline(s) — cambia 80 por tu X preferido
+    "editor.rulers": [
+        80
+    ],
+    // No hacer word wrap automático; la línea guía y el formateador controlan el ancho
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 80,
+    // Formatear al guardar si tienes un formateador instalado (Prettier recomendado)
+    "editor.formatOnSave": true,
+    // Si usas la extensión Prettier, esta configuración la fuerza a printWidth 80
+    "prettier.printWidth": 80,
+    // Opcional: para que ESLint se ejecute en archivos jsx
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+        ]
+    }
+}

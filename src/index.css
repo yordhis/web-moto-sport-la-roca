@@ -78,6 +78,8 @@ body {
 @layer base {
   html {
     background: white;
+    /* smooth scrolling for in-page anchors */
+    scroll-behavior: smooth;
   }
   body {
     font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system,
