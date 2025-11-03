@@ -1,0 +1,8 @@
+.carousel{position:relative; overflow:hidden; border-radius:8px}
+.carousel-track{display:flex; transition:transform 520ms cubic-bezier(.2,.9,.2,1)}
+.carousel-slide{min-width:100%; height:320px; display:flex; align-items:center; justify-content:center}
+.carousel-slide img{width:100%; height:100%; object-fit:cover; display:block}
+.carousel-dots{position:absolute; left:50%; transform:translateX(-50%); bottom:10px; display:flex; gap:8px}
+.dot{width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.4); border:none}
+.dot.active{background:var(--light, #fff)}
+@media(max-width:720px){.carousel-slide{height:200px}}
