@@ -99,7 +99,7 @@ export default function About() {
                 <h4 className="text-2xl sm:text-4xl my-3 font-semibold">
                   PRINCIPIOS
                 </h4>
-                <p className="text-1xl sm:text-2xl text-sm text-gray-600">
+                <div className="text-1xl sm:text-2xl text-sm text-gray-600">
                   <ul>
                     <li>
                       <b>Confianza:</b> Por la
@@ -119,7 +119,7 @@ export default function About() {
                       meta de expansión regional.
                     </li>
                   </ul>
-                </p>
+                </div>
               </div>
             </Reveal>
           </div>

@@ -8,7 +8,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center "
         style={{
           backgroundImage:
-            "url('/assets/img/banner.png')",
+            "url('/assets/img/banner.webp')",
         }}
         aria-hidden
       />
@@ -23,6 +23,10 @@ export default function Hero() {
             La Roca
           </h1>
           <p className="inline-block bg-black/50 px-4 py-2 rounded mt-4 font-semibold">
+            <span
+              className={`opacity-100 w-2 h-2 rounded-full bg-rocred inline-block`}
+              aria-hidden
+            ></span>{' '}
             Seguridad que te hace rodar
           </p>
         </Reveal>
