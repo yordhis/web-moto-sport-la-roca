@@ -10,6 +10,10 @@ export default function Header() {
   const [activeLink, setActiveLink] =
     useState('top');
   const firstLinkRef = useRef(null);
+  const [
+    activeAnimationHeader,
+    setActiveAnimationHeader,
+  ] = useState(true);
 
   function handleNavClick(e, id) {
     // allow keyboard activation etc
@@ -42,6 +46,13 @@ export default function Header() {
     setOpen(false);
   }
 
+  // detectar tamaño del dispositivo
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setActiveAnimationHeader(false);
+    }
+  }, []);
+
   // Scroll listener to detect if we're at the top
   useEffect(() => {
     const onScroll = () =>
@@ -50,6 +61,7 @@ export default function Header() {
     window.addEventListener('scroll', onScroll, {
       passive: true,
     });
+
     return () =>
       window.removeEventListener(
         'scroll',
@@ -133,10 +145,10 @@ export default function Header() {
   return (
     <header className="bg-black text-white sticky top-0 z-50 shadow">
       <div
-        className={`max-w-6xl mx-auto px-4 md:transition-all md:duration-500 ${atTop ? 'py-6' : 'py-4'}`}
+        className={`max-w-6xl mx-auto px-4 md:transition-all md:duration-500 ${atTop && activeAnimationHeader ? 'py-6' : 'py-4'}`}
       >
         <div
-          className={`w-full md:transition-all md:duration-500 ${atTop ? 'flex flex-col items-center' : 'flex items-center justify-between'}`}
+          className={`w-full md:transition-all md:duration-500 ${atTop && activeAnimationHeader ? 'flex flex-col items-center' : 'flex items-center justify-between'}`}
         >
           {/* Logo */}
           <div className="logo md:transition-all md:duration-500">
@@ -144,14 +156,14 @@ export default function Header() {
               <img
                 src="/assets/img/logo-rectangular-blanco.png"
                 alt="Moto Sport La Roca"
-                className={`${atTop ? 'h-20' : 'h-10'} md:transition-all md:duration-500 ${atTop ? 'mx-auto' : ''}`}
+                className={`${atTop && activeAnimationHeader ? 'h-20 md:transition-all md:duration-500 mx-auto' : 'h-10 md:transition-all md:duration-500'}  `}
               />
             </a>
           </div>
 
           {/* Desktop nav: centered below logo when atTop, inline when scrolled */}
           <nav
-            className={`hidden md:flex items-center gap-8 md:transition-all md:duration-500 ${atTop ? 'md:justify-center md:mt-4' : ''}`}
+            className={`hidden md:flex items-center gap-8 md:transition-all md:duration-500 ${atTop && activeAnimationHeader ? 'md:justify-center md:mt-4' : ''}`}
             aria-label="Main navigation"
           >
             <a
