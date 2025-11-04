@@ -28,7 +28,7 @@ export default function Brands() {
         <Reveal className="rounded-3xl bg-rocred text-white shadow-lg px-4 sm:px-6 md:px-10 py-10 sm:py-12 md:py-16">
           <div className="text-center">
             <h4 className="text-xl sm:text-2xl font-bold">
-              MARCAS QUE TENEMOS EN STOCK
+              MARCAS EN NUESTRO STOCK
             </h4>
           </div>
           <div className="mt-6">

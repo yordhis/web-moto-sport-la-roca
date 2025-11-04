@@ -195,6 +195,20 @@ export default function Header() {
             </a>
             <a
               className="text-white font-extrabold uppercase text-sm"
+              href="#history"
+              onClick={(e) =>
+                handleNavClick(e, 'history')
+              }
+            >
+              <span
+                className={`${activeLink === 'history' ? 'opacity-100' : 'opacity-0'} ml-2 w-2 h-2 rounded-full bg-rocred inline-block`}
+                aria-hidden
+              ></span>
+              {'  '}
+              HISTORIA
+            </a>
+            <a
+              className="text-white font-extrabold uppercase text-sm"
               href="#brands"
               onClick={(e) =>
                 handleNavClick(e, 'brands')
