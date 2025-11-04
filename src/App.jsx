@@ -7,6 +7,8 @@ import Events from './components/Events';
 import Brands from './components/Brands';
 import Footer from './components/Footer';
 import History from './components/History';
+import WhatsAppButton from './components/WhatsAppButton';
+import ScrollToTopMoto from './components/ScrollToTopMoto';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Brands />
         <Stores />
       </main>
+      <WhatsAppButton />
+      <ScrollToTopMoto />
       <Footer />
     </div>
   );
