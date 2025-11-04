@@ -6,6 +6,7 @@ import Stores from './components/Stores';
 import Events from './components/Events';
 import Brands from './components/Brands';
 import Footer from './components/Footer';
+import History from './components/History';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <History />
         <Events />
         <Brands />
         <Stores />
