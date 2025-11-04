@@ -10,7 +10,11 @@ const slides = [
 
 export default function Stores() {
   return (
-    <section className="py-12">
+    <section
+      className="py-12"
+      id="stores"
+      aria-label="Nuestras tiendas"
+    >
       <div className="max-w-6xl mx-auto px-4">
         <Reveal>
           <h3 className="text-2xl font-bold uppercase">

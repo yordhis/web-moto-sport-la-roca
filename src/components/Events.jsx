@@ -5,6 +5,7 @@ export default function Events() {
   const cards = [1, 2, 3, 4];
   return (
     <section
+      id="events"
       className="py-12"
       aria-label="Eventos y noticias"
     >

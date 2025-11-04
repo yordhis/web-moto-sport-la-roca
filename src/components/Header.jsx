@@ -209,6 +209,20 @@ export default function Header() {
             </a>
             <a
               className="text-white font-extrabold uppercase text-sm"
+              href="#events"
+              onClick={(e) =>
+                handleNavClick(e, 'events')
+              }
+            >
+              <span
+                className={`${activeLink === 'events' ? 'opacity-100' : 'opacity-0'} ml-2 w-2 h-2 rounded-full bg-rocred inline-block`}
+                aria-hidden
+              ></span>
+              {'  '}
+              Noticias
+            </a>
+            <a
+              className="text-white font-extrabold uppercase text-sm"
               href="#brands"
               onClick={(e) =>
                 handleNavClick(e, 'brands')
@@ -220,6 +234,20 @@ export default function Header() {
               ></span>
               {'  '}
               MARCAS
+            </a>
+            <a
+              className="text-white font-extrabold uppercase text-sm"
+              href="#stores"
+              onClick={(e) =>
+                handleNavClick(e, 'stores')
+              }
+            >
+              <span
+                className={`${activeLink === 'stores' ? 'opacity-100' : 'opacity-0'} ml-2 w-2 h-2 rounded-full bg-rocred inline-block`}
+                aria-hidden
+              ></span>
+              {'  '}
+              TIENDAS
             </a>
             <a
               className="text-white font-extrabold uppercase text-sm"
@@ -300,6 +328,24 @@ export default function Header() {
               Nosotros
             </a>
             <a
+              href="#history"
+              className="font-bold uppercase text-lg block w-full text-left py-2"
+              onClick={(e) =>
+                handleNavClick(e, 'history')
+              }
+            >
+              Historia
+            </a>
+            <a
+              href="#events"
+              className="font-bold uppercase text-lg block w-full text-left py-2"
+              onClick={(e) =>
+                handleNavClick(e, 'events')
+              }
+            >
+              Noticias
+            </a>
+            <a
               href="#brands"
               className="font-bold uppercase text-lg block w-full text-left py-2"
               onClick={(e) =>
@@ -307,6 +353,15 @@ export default function Header() {
               }
             >
               Marcas
+            </a>
+            <a
+              href="#stores"
+              className="font-bold uppercase text-lg block w-full text-left py-2"
+              onClick={(e) =>
+                handleNavClick(e, 'stores')
+              }
+            >
+              Tiendas
             </a>
             <a
               href="#contact"
