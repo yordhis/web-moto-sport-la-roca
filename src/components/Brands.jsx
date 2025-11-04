@@ -22,33 +22,38 @@ export default function Brands() {
   return (
     <section
       id="brands"
-      className="py-16 scroll-mt-24 relative overflow-visible"
+      className="py-16 scroll-mt-24"
     >
-      {/* Full-bleed rounded hexagon background */}
-      <Reveal className="absolute left-0 right-0 mx-auto w-full overflow-hidden">
-        <div
-          className="w-full h-80 bg-rocred"
-          aria-hidden
-        />
-      </Reveal>
-
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <div className="text-center py-12">
-          <h4 className="text-white text-xl font-bold">
-            MARCAS QUE TENEMOS EN STOCK
-          </h4>
-          <div className="mt-6 flex flex-wrap justify-center gap-6">
-            {logos.map((src, i) => (
-              <div key={i} className="p-2">
-                <img
-                  src={src}
-                  alt={`Marca ${i + 1}`}
-                  className="h-10 object-contain grayscale opacity-80 hover:opacity-100 transition"
-                />
-              </div>
-            ))}
+      <div className="max-w-6xl mx-auto px-4">
+        <Reveal className="rounded-3xl bg-rocred text-white shadow-lg px-4 sm:px-6 md:px-10 py-10 sm:py-12 md:py-16">
+          <div className="text-center">
+            <h4 className="text-xl sm:text-2xl font-bold">
+              MARCAS QUE TENEMOS EN STOCK
+            </h4>
           </div>
-        </div>
+          <div className="mt-6">
+            <div
+              className="grid gap-4 sm:gap-6 items-center justify-items-center"
+              style={{
+                gridTemplateColumns:
+                  'repeat(auto-fit, minmax(88px, 1fr))',
+              }}
+            >
+              {logos.map((src, i) => (
+                <div
+                  key={i}
+                  className="w-full flex items-center justify-center p-1"
+                >
+                  <img
+                    src={src}
+                    alt={`Marca ${i + 1}`}
+                    className="h-8 sm:h-10 md:h-12 w-auto object-contain grayscale opacity-80 hover:opacity-100 transition"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
